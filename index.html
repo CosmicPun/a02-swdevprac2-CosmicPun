@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศูนย์รับอุปการะสุนัข - หาเพื่อนสี่ขาที่ใช่สำหรับคุณ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Tahoma', sans-serif; 
+            background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #2c5f8d;
+            color: white;
+            padding: 30px; 
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin-bottom: 10px;
+        }
+        main {
+            flex-grow: 1;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        main h2 {
+            text-align: center;
+            color: #2c5f8d;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+        .dogs-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            gap: 30px;
+            justify-content: center;
+        }
+        .dog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(25% - 23px);
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+        }
+        .dog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .dog-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .dog-info {
+            padding: 20px;
+            flex-grow: 1; 
+        }
+        .dog-info h3 {
+            color: #2c5f8d;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        .dog-info p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .dog-info .label {
+            font-weight: bold;
+            color: #2c5f8d;
+        }
+    
+        .adopt-btn {
+            display: block;
+            background-color: #2c5f8d;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px;
+            margin: 0 20px 20px 20px; 
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .adopt-btn:hover {
+            background-color: #ff9800;
+        }
+        .footer-left {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐾 ศูนย์รับอุปการะสุนัข</h1>
+        <p>ตามหาเพื่อนสี่ขาที่สมบูรณ์แบบสำหรับคุณ</p>
+    </header>
+    
+    <main>
+        <h2>สุนัขที่รอคอยบ้านใหม่</h2>
+        <div class="dogs-container">
+            <div class="dog-card">
+                <img src="src/1.png" alt="เจ้านำโชค พันธุ์อนาโตเลียน เชพเพิร์ด">
+                <div class="dog-info">
+                    <h3>Lucky</h3>
+                    <p><span class="label">สายพันธุ์:</span> อนาโตเลียน เชพเพิร์ด</p>
+                    <p><span class="label">อายุ:</span> 3 ปี</p>
+                    <p><span class="label">เพศ:</span> ผู้</p>
+                    <p><span class="label">รายละเอียด:</span> เป็นมิตร พลังงานสูง และชอบเล่นคาบของมาก</p>
+                </div>
+                <a href="adoptme.html" class="adopt-btn">สนใจอุปการะ</a>
+            </div>
+            
+            <div class="dog-card">
+                <img src="src/2.png" alt="เบลล์ พันธุ์ลาบราดอร์">
+                <div class="dog-info">
+                    <h3>Belle</h3>
+                    <p><span class="label">สายพันธุ์:</span> ลาบราดอร์ รีทรีฟเวอร์</p>
+                    <p><span class="label">อายุ:</span> 4 ปี</p>
+                    <p><span class="label">เพศ:</span> เมีย</p>
+                    <p><span class="label">รายละเอียด:</span> ฉลาดและซื่อสัตย์ เข้ากับเด็กๆ ได้ดีมาก</p>
+                </div>
+                <a href="adoptme.html" class="adopt-btn">สนใจอุปการะ</a>
+            </div>
+            
+            <div class="dog-card">
+                <img src="src/3.png" alt="ชาร์ลี พันธุ์ชิบะ">
+                <div class="dog-info">
+                    <h3>Charlie</h3>
+                    <p><span class="label">สายพันธุ์:</span> ชิบะ อินุ</p>
+                    <p><span class="label">อายุ:</span> 2 ปี</p>
+                    <p><span class="label">เพศ:</span> ผู้</p>
+                    <p><span class="label">รายละเอียด:</span> ร่าเริงและเป็นตัวของตัวเอง ตื่นตัว มั่นใจ</p>
+                </div>
+                <a href="adoptme.html" class="adopt-btn">สนใจอุปการะ</a>
+            </div>
+            
+            <div class="dog-card">
+                <img src="src/4.png" alt="เดซี่ พันธุ์ไซบีเรียน ฮัสกี้">
+                <div class="dog-info">
+                    <h3>Daisy</h3>
+                    <p><span class="label">สายพันธุ์:</span> ไซบีเรียน ฮัสกี้</p>
+                    <p><span class="label">อายุ:</span> 1 ปี 6 เดือน</p>
+                    <p><span class="label">เพศ:</span> เมีย</p>
+                    <p><span class="label">รายละเอียด:</span> พลังงานล้นเหลือ ชอบทำกิจกรรมกลางแจ้ง</p>
+                </div>
+                <a href="adoptme.html" class="adopt-btn">สนใจอุปการะ</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer-left">
+        รหัสนิสิต: 6833251621 ชื่อ: ศักย์ศรณ์ แย้มธูป
+    </footer>
+</body>
+</html>
