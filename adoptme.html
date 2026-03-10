@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แบบฟอร์มขอรับอุปการะสุนัข</title>
+    <title>แบบฟอร์มขอรับอุปการะสุนัขรับอุปการะ</title>
     <style>
         * {
             margin: 0;
@@ -72,12 +72,6 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-section {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #e0e0e0;
         }
 
         .form-section:last-of-type {
@@ -186,13 +180,7 @@
         <h1>🐾 แบบฟอร์มขอรับอุปการะสุนัข</h1>
         <p>ร่วมเป็นส่วนหนึ่งของครอบครัวคนรักสุนัข</p>
     </header>
-
     <main>
-        <div class="back-container">
-            <a href="index.html" class="btn-back">← กลับหน้าแรก</a>
-        </div>
-
-        <h2>ข้อมูลการสมัครอุปการะ</h2>
         <div class="form-container">
             <form action="#" method="POST">
                 <div class="form-section">
@@ -207,7 +195,7 @@
                     </div>
                     <div class="form-group">
                         <label for="address">ที่อยู่โดยละเอียด <span class="required">*</span></label>
-                        <textarea id="address" name="address" required></textarea>
+                        <textarea id="address" name="address" ></textarea>
                     </div>
                 </div>
 
@@ -215,8 +203,9 @@
                     <h3>ข้อมูลที่พักอาศัย</h3>
                     <div class="form-group">
                         <label for="housingType">เลือกประเภทที่พักอาศัย <span class="required">*</span></label>
-                        <select id="housingType" name="housingType" required>
+                        <select id="housingType" name="housingType">
                             <option value="">-- กรุณาเลือก --</option>
+                            <option value="house">บ้านสวน</option>
                             <option value="house">บ้านเดี่ยว</option>
                             <option value="condo">คอนโดมิเนียม/อพาร์ทเมนท์</option>
                             <option value="townhouse">ทาวน์เฮ้าส์</option>
@@ -249,18 +238,12 @@
                     </div>
                 </div>
 
-                <div class="form-section">
                     <div class="checkbox-option">
                         <input type="checkbox" id="agreement" name="agreement">
-                        <label for="agreement">ยอมรับว่าการอุปการะอาจไม่ได้รับการรับรองผล <span
+                        <label for="agreement">รับทราบการไม่รับรองการได้รับอุปการะสุนัข<span
                                 class="required">*</span></label>
                     </div>
-                </div>
-
-                <div class="button-group-right">
-                    <button type="reset">ล้างข้อมูล</button>
-                    <button type="submit">ส่งใบสมัคร</button>
-                </div>
+                <button type="submit">ส่งใบสมัคร</button>
             </form>
         </div>
     </main>

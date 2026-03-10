@@ -8,32 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
         const agreement = document.getElementById('agreement').checked;
 
         if (!firstName) {
-            alert('Please enter your name');
+            alert('โปรดกรอกชื่อและนามสกุลของคุณ');
             event.preventDefault();
             return;
         }
 
         if (!phone) {
-            alert('Please enter your telephone number');
+            alert('โปรดกรอกหมายเลขโทรศัพท์ของคุณ');
             event.preventDefault();
             return;
         }
 
         if (!petCountStr) {
-            alert('Please enter the number of pets');
+            alert('โปรดกรอกจำนวนสัตว์เลี้ยง');
             event.preventDefault();
             return;
         }
 
         const petCount = Number(petCountStr);
         if (isNaN(petCount) || petCount < 0 || petCount > 100) {
-            alert('must be in range 0 - 100');
+            alert('จำนวนสัตว์เลี้ยงต้องอยู่ในช่วง 0 - 100');
             event.preventDefault();
             return;
         }
 
         if (!agreement) {
-            alert('Please accept the policy');
+            alert('โปรดยอมรับนโยบาย');
             event.preventDefault();
             return;
         }
