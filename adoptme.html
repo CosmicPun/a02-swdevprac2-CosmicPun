@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Tahoma', sans-serif;
             background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
@@ -17,16 +19,19 @@
             display: flex;
             flex-direction: column;
         }
+
         header {
             background-color: #2c5f8d;
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         header h1 {
             margin-bottom: 10px;
         }
+
         main {
             flex-grow: 1;
             padding: 20px;
@@ -34,11 +39,12 @@
             margin: 0 auto;
             width: 100%;
         }
-        
+
 
         .back-container {
             margin-bottom: 20px;
         }
+
         .btn-back {
             display: inline-block;
             padding: 8px 20px;
@@ -49,6 +55,7 @@
             font-size: 14px;
             transition: background 0.3s;
         }
+
         .btn-back:hover {
             background-color: #5a6268;
         }
@@ -59,28 +66,34 @@
             margin-bottom: 30px;
             font-size: 28px;
         }
+
         .form-container {
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .form-section {
             margin-bottom: 30px;
             padding-bottom: 30px;
             border-bottom: 2px solid #e0e0e0;
         }
+
         .form-section:last-of-type {
             border-bottom: none;
         }
+
         .form-section h3 {
             color: #2c5f8d;
             margin-bottom: 15px;
             font-size: 18px;
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         label {
             display: block;
             margin-bottom: 8px;
@@ -88,6 +101,7 @@
             font-weight: bold;
             font-size: 14px;
         }
+
         input[type="text"],
         input[type="tel"],
         textarea,
@@ -98,28 +112,33 @@
             border-radius: 5px;
             font-size: 14px;
         }
+
         textarea {
             resize: vertical;
             min-height: 100px;
         }
-        .radio-group, .checkbox-group {
+
+        .radio-group,
+        .checkbox-group {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        .radio-option, .checkbox-option {
+
+        .radio-option,
+        .checkbox-option {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
+
         .button-group-right {
             display: flex;
             gap: 10px;
             justify-content: flex-end;
             margin-top: 20px;
         }
-        
+
         button {
             padding: 12px 30px;
             font-size: 16px;
@@ -129,21 +148,25 @@
             font-weight: bold;
             transition: opacity 0.3s;
         }
+
         button[type="submit"] {
             background-color: #2c5f8d;
             color: white;
         }
+
         button[type="reset"] {
             background-color: #ff9800;
             color: white;
         }
+
         button:hover {
             opacity: 0.9;
         }
-        
+
         .required {
             color: red;
         }
+
         .footer-left {
             position: fixed;
             bottom: 10px;
@@ -157,12 +180,13 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>🐾 แบบฟอร์มขอรับอุปการะสุนัข</h1>
         <p>ร่วมเป็นส่วนหนึ่งของครอบครัวคนรักสุนัข</p>
     </header>
-    
+
     <main>
         <div class="back-container">
             <a href="index.html" class="btn-back">← กลับหน้าแรก</a>
@@ -186,7 +210,7 @@
                         <textarea id="address" name="address" required></textarea>
                     </div>
                 </div>
-                
+
                 <div class="form-section">
                     <h3>ข้อมูลที่พักอาศัย</h3>
                     <div class="form-group">
@@ -199,14 +223,14 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="form-section">
                     <h3>ลักษณะการเลี้ยงดู</h3>
                     <div class="form-group">
                         <label>รูปแบบการเลี้ยง <span class="required">*</span></label>
                         <div class="radio-group">
                             <div class="radio-option">
-                                <input type="radio" id="indoor" name="careStyle" value="indoor" required>
+                                <input type="radio" id="indoor" name="careStyle" value="indoor">
                                 <label for="indoor">เลี้ยงภายในบ้าน</label>
                             </div>
                             <div class="radio-option">
@@ -216,22 +240,23 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-section">
                     <h3>จำนวนสัตว์เลี้ยง</h3>
                     <div class="form-group">
                         <label for="petCount">จำนวนสัตว์เลี้ยงปัจจุบัน <span class="required">*</span></label>
-                        <input type="text" id="petCount" name="petCount" placeholder="ตัว" required>
+                        <input type="text" id="petCount" name="petCount" placeholder="ตัว">
                     </div>
                 </div>
-                
+
                 <div class="form-section">
                     <div class="checkbox-option">
-                        <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement">ยอมรับว่าการอุปการะอาจไม่ได้รับการรับรองผล <span class="required">*</span></label>
+                        <input type="checkbox" id="agreement" name="agreement">
+                        <label for="agreement">ยอมรับว่าการอุปการะอาจไม่ได้รับการรับรองผล <span
+                                class="required">*</span></label>
                     </div>
                 </div>
-                
+
                 <div class="button-group-right">
                     <button type="reset">ล้างข้อมูล</button>
                     <button type="submit">ส่งใบสมัคร</button>
@@ -239,9 +264,11 @@
             </form>
         </div>
     </main>
-    
+
     <footer class="footer-left">
         รหัสนิสิต: 6833251621 ชื่อ: ศักย์ศรณ์ แย้มธูป
     </footer>
+    <script src="adoptme.js"></script>
 </body>
+
 </html>
